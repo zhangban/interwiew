@@ -47,6 +47,9 @@
     usermode -a -G zhang zhangban  #-a表示添加到用户组中，并且不离开其他用户组
 --7、删除用户组中的成员
     gpasswd zhang -d zhangban #删除组zhang中的成员zhangban
+--8、怎么给用户赋予权限
+     usermod -g root zhangban #给用户赋予root权限
+     
     
 面试官：
 1.自我介绍
