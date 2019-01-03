@@ -28,26 +28,36 @@
 答：chmod +x 文件名
 9.未来有什么规划？
 10.Linux怎么创建用户(密码)和组，
---添加新的用户：useradd -m zhangban
---1、在root权限下，useradd zhangban   它并没有在home目录下创建同名文件夹，此用户不能用
-     useradd -m zhangban            此命令会在home目录下创建同名文件夹 此用户能用
-     passwd  zhangban               为此用户设置密码
---2、adduser zhangban                此命令会在home目录下创建同名文件夹 此用户能用
---3、删除用户
-      userdel zhangban  用户删除了，可它留在系统上的文件还在
-      userdel -r zhangban  用户删除了，它留在系统上的文件也被删除
---4、创建用户组
-    groupadd -g  666 zhang     #666是用户组标识gid
---5、删除用户组
-    groupdel zhang
---6、用户添加到用户组
-    usermode  -G zhang zhangban #这样会使你离开其他用户组，仅仅为这个用户组的成员
-    usermode -a -G zhang zhangban  #-a表示添加到用户组中，并且不离开其他用户组
---7、删除用户组中的成员
-    gpasswd zhang -d zhangban #删除组zhang中的成员zhangban
---8、怎么给用户赋予权限
-     usermod -g root zhangban #给用户赋予root权限
+                --添加新的用户：useradd -m zhangban
+                --1、在root权限下，useradd zhangban   它并没有在home目录下创建同名文件夹，此用户不能用
+                     useradd -m zhangban            此命令会在home目录下创建同名文件夹 此用户能用
+                     passwd  zhangban               为此用户设置密码
+                --2、adduser zhangban                此命令会在home目录下创建同名文件夹 此用户能用
+                --3、删除用户
+                      userdel zhangban  用户删除了，可它留在系统上的文件还在
+                      userdel -r zhangban  用户删除了，它留在系统上的文件也被删除
+                --4、创建用户组
+                    groupadd -g  666 zhang     #666是用户组标识gid
+                --5、删除用户组
+                    groupdel zhang
+                --6、用户添加到用户组
+                    usermode  -G zhang zhangban #这样会使你离开其他用户组，仅仅为这个用户组的成员
+                    usermode -a -G zhang zhangban  #-a表示添加到用户组中，并且不离开其他用户组
+                --7、删除用户组中的成员
+                    gpasswd zhang -d zhangban #删除组zhang中的成员zhangban
+                --8、怎么给用户赋予权限
+                     usermod -g root zhangban #给用户赋予root权限
      
+     
+     
+     
+--9、Linux查看系统进程
+        ps -ef|grep java
+--10、Linux重启系统命令
+        nohup ./startWeblogic.sh &
+--11、查看日志命令
+        tail -f nohup.out
+  
     
 
 
