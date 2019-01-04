@@ -76,7 +76,7 @@ SELECT sal, comm FROM emp WHERE deptno = dnum;
  B  FOR emp_rec IN emp_cursor(20) LOOP  …  END LOOP;
  C  OPEN emp_cursor(20);
  D  OPEN emp_cursor FOR 20;
- 
+ 选B D
  
 --9[多选]
 1. create table ord   
@@ -90,6 +90,8 @@ SELECT sal, comm FROM emp WHERE deptno = dnum;
  C  5
  D  2
  E  4
+ 选AC
+ 
  
 --10[单选]
 当对多列排序时，用什么符号来分隔多列？
