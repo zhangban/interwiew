@@ -1,4 +1,11 @@
---1.检索部门编号，部门名称
+--1.检索部门编号、部门名称、部门所在地区及每个部门的员工总数
+select d.deptno,d.dname,d.loc,count(*)
+from emp e ,dept d
+where e.deptno=d.deptno
+group by d.deptno,d.name,d.loc;
+
+--2.
+
 
 
 
