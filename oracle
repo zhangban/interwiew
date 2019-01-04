@@ -48,22 +48,165 @@ end ;
  D  一个
  E  至少一个，但不超过两个
  
+ --6[单选]
+ 什么函数用来对行计数？
+ A  TOTAL()
+ B  NUMBER()
+ C  ADD()
+ D  COUNT()
  
+ --7[多选]
+ 下面哪些命令不属于数据操纵语言（DML）？
+ A  ALTER
+ B  UPDATE
+ C  DROP
+ D  INSERT
+--8[多选]
+下面哪些命令不属于数据操纵语言（DML）？
+ A  ALTER
+ B  UPDATE
+ C  DROP
+ D  INSERT
+--9[多选]
+1. create table ord   
+2. ( ordid number (3) constraint ord_v_pk primary key, 
+3.           #orderdate date,   
+4.           ship4date date , 
+5.           3item_id number (7) constraint it_v not null) ;   
+上面的语句，哪两行有错误？
+ A  3
+ B  1
+ C  5
+ D  2
+ E  4
+--10[单选]
+当对多列排序时，用什么符号来分隔多列？
+ A  semicolon分号
+ B  中横线 (-)
+ C  逗号(,)
+ D  斜杠 (\)
  
- 
+--11[单选]
+下面这个语句从表Customers中查询什么数据？
+SELECT * FROM Customers WHERE City LIKE '[!bsp]%'
+ A  City字段值不以“b”、“s”和“p”开始的Customers数据
+ B  City字段值以“bsp”开始的Customers数据
+ C  City字段值包含字母“b”、“s”和“p”的任意组合的Customers数据
+ D  City字段值以“b”、“s”或“p”开始的Customers数据
+ E  City字段值以“b”、“s”或“p”结尾的Customers数据
+--12[单选]
+EMP1 表包含下面这些字段：
+ENAME                     VARCHAR2(35) 
+SALARY                    NUMBER(8,2) 
+HIRE_DATE              DATE 
+管理部门想要一份已在公司工作了5 年以上的员工名单，以下哪个SQL 语句可以显示需要的结果？
+ A  SELECT ENAME FROM EMP1 WHERE SYSDATE-HIRE_DATE>5;
+ B  SELECT ENAME FROM EMP1 WHERE HIRE_DATE-SYSDATE>5;
+ C  SELECT ENAME FROM EMP1 WHERE (SYSDATE-HIRE_DATE)/365>5;
+ D  SELECT ENAME FROM EMP1 WHERE (SYSDATE-HIRE_DATE)*365>5;
+--13[单选]
+以下哪个命令可以用来从表 STATE中 DROP 列 UPDATE_DT ?
+ A  你不能从这个表中DROP该列
+ B  ALTER TABLE STATE DROP COLUMN UPDATE_DT;
+ C  ALTER TABLE STATE REMOVE COLUMN UPDATE_DT;
+ D  DROP COLUMN UPDATE_DT FROM STATE;
+--14[单选]
+以下哪行有错? 
+（1）  SELECT deptno 
+（2）  FROM emp 
+（3）  GROUP BY deptno 
+（4）  HAVING COUNT(deptno)= 
+（5）  (SELECT max(count(deptno)) 
+（6）  FROM emp 
+（7）  GROUP BY deptno);
+ A  Line 7
+ B  Line 3
+ C  Line 4
+ D  Line 5
+ E  都没错
+--15[单选]
+“JOIN”关键字用于：
+ A  在一个查询操作中联接两个数据库
+ B  永久地将两个表尾对尾联接
+ C  在一个查询操作中联接两张表
+ D  永久地将两个数据库联接在一起
+--16[单选]
+执行下面的语句： 
+select e.ename,d.dname from employees e, deptment d where e.deptno (+) = d.deptno; 
+会显示什么样的结果？
+ A  报错
+ B  显示deptment表的全部信息，没有对应员工以null代替
+ C  语法正确，但不会运行
+ D  显示employees表的全部信息，没有对应部门以null代替
 
+--17[单选]
+什么函数用来去掉左右的空格？
+ A  PAD()
+ B  RPAD()
+ C  LPAD()
+ D  TRIM()
+选D
+--18[单选]
+emp 表结构如下： 
+empno number(9,3) 
+ename varchar2(10) 
+sal number (9,3)   
+mgr number(4) 
+什么命令可以让你添加loc 列到列sal 后
+ A  alter table emp add column3(loc varchar2(20));
+ B  alter table add ( sal ) column3 (loc varchar2( 20));
+ C  其他三种说法都不对
+ D  alter table emp modify after column3( loc varchar2(20));
+选C
+19[单选]
+Timestamp数据类型不包含下面哪个值域？
+ A  Century
+ B  Month
+ C  Hour
+ D  Day
+ E  Year
+ 选A
+ --20[单选]
+ 什么关键字用来检测是否为空？
+ A  VOID
+ B  EMPTY
+ C  NONE
+ D  NULL
 
+--21[单选]
+数据定义语言是用于（  ）的方法。
+ A  删除和更新数据
+ B  定义和修改数据结构
+ C  确保数据的准确性
+ D  查看数据
+--22[单选]
+在Oracle 的SQL PLUS 中执行DML 语句后，没有提交便正常退出后，事务将：
+ A  自动回滚
+ B  提示是否保存
+ C  报错警告
+ D  自动提交
+--23[单选]
+什么函数用来取一列中的最小值？
+ A  LOW()
+ B  LOWEST()
+ C  SMALLEST()
+ D  MIN()
 
+--24[多选]
+Oracle中，表名应该严格遵循下列哪些命名规则（  ）。
+ A  同一用户模式下的不同表不能具有相同的名称
+ B  不能使用Oracle保留字来为表命名
+ C  表名必须使用前缀T_
+ D  表名首字符可以为字母或下划线
+ E  表名的最大长度为20 个字符
 
-
-
-
-
-
-
-
-
-
+--25[多选]
+通常情况下，（  ）值可以唯一地标识数据库中的一行。
+ A  PRIMARY KEY
+ B  UNIQUE
+ C  ID
+ D  ROWNUM
+ E  ROWID
 
 
 
