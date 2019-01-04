@@ -1,0 +1,69 @@
+--1[单选] Oracle 启动的初始化参数文件搜寻顺序是：
+1. initsid.ora
+2. init.ora
+3. spfilesid.ora
+4. spfile.ora
+ A  1,4,3
+ B  1,3,2
+ C  1,2,3
+ D  3,4,1  
+ E  3,1,4
+ 选D
+--2 [单选]  假定有一张表用户表users，其中一身份证字段ID_card。为了维护数据的完整性，在设计数据库时，
+最好对ID_card 字段添加约束，请问应该添加什么约束？
+ A  default
+ B  check
+ C  primary key
+ D  unique
+ 选 C，D
+ 
+--3[单选]
+哪一个聚集函数用来返回一列中所有值的和？
+ A  ALL()
+ B  SUM()
+ C  TOTAL()
+ D  ADD()
+ 
+--4[单选]
+begin 
+    for I in 1..10 loop 
+        if I = 3 or I = 9 then null ; 
+        else insert into ord values (I); 
+        end if ; 
+    end loop ; 
+end ; 
+多少行数据insert 到了ord 表?
+ A  4
+ B  9
+ C  3
+ D  8 
+ E  1
+ 选D
+ 
+--5[单选]
+一张表可以有多少个主键？
+ A  在一到五之间
+ B  无限制
+ C  表不能有主键
+ D  一个
+ E  至少一个，但不超过两个
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
