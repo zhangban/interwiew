@@ -9,6 +9,7 @@
  D  3,4,1  
  E  3,1,4
  选D
+ 
 --2 [单选]  假定有一张表用户表users，其中一身份证字段ID_card。为了维护数据的完整性，在设计数据库时，
 最好对ID_card 字段添加约束，请问应该添加什么约束？
  A  default
@@ -23,6 +24,7 @@
  B  SUM()
  C  TOTAL()
  D  ADD()
+ 选B
  
 --4[单选]
 begin 
@@ -47,6 +49,7 @@ end ;
  C  表不能有主键
  D  一个
  E  至少一个，但不超过两个
+ 选D
  
  --6[单选]
  什么函数用来对行计数？
@@ -54,6 +57,7 @@ end ;
  B  NUMBER()
  C  ADD()
  D  COUNT()
+ 选D
  
  --7[多选]
  下面哪些命令不属于数据操纵语言（DML）？
@@ -61,13 +65,18 @@ end ;
  B  UPDATE
  C  DROP
  D  INSERT
+ 选A，D
  
 --8[多选]
-下面哪些命令不属于数据操纵语言（DML）？
- A  ALTER
- B  UPDATE
- C  DROP
- D  INSERT
+在Oracle 中，PL/SQL 块中定义了一个带参数的游标： 
+CURSOR emp_cursor(dnum NUMBER) IS 
+SELECT sal, comm FROM emp WHERE deptno = dnum; 
+那么正确打开此游标的语句是（  ）。
+ A  OPEN emp_cursor USING 20;
+ B  FOR emp_rec IN emp_cursor(20) LOOP  …  END LOOP;
+ C  OPEN emp_cursor(20);
+ D  OPEN emp_cursor FOR 20;
+ 
  
 --9[多选]
 1. create table ord   
