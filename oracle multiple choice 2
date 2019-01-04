@@ -1,0 +1,115 @@
+--1.当你执行以下查询语句：
+select empno,ename from emp where empno =7782 OR empno=7876;在where语句中，以下哪个操作符可以取代OR？
+A  IN
+B  BETWEEN ...
+C  LIKE
+D  <=
+E  >=
+选A
+
+--2.下面哪一个 like 命令返回名字为HOTKA 的行：
+A  where ename like '_HOT%'
+B  where ename like 'H_T%'
+C  where ename like '%TKA_'
+D  where ename like '%TOK%'
+选B
+
+--3 显示系统时间：
+select sysdate from fual;
+
+--4 要以自身的模式创建私有同义词，用户必须拥有（）系统权限，（选择一项）
+A create private synonym
+B create public synonym
+C create  synonym
+D create any synonym
+选C
+
+--5  在设计数据库时，要充分考虑数据的完整性或准确性，
+下面关于primary key 和unique 的描述错误的是（A B）（选择二项）
+A primary key 用来在表中设置主键，主键列的值可以是重复的，用来标识表中的每一条记录
+B primary key 列和 unique 列都不可以有null值
+C 设为unique的列的值是不能重复的，用来唯一区别unique列的值
+D primary key 列不可以有null值，而unique列可以有null的
+
+--6  你发出命令：drop table emp 
+此时你还没有明确发出commit命令，你能用什么命令撤销上面的drop语句所做的操作（B）
+（选择一项）
+A 关闭数据库
+B 什么命令都不可以，因为DDL语句不能被回滚
+C 发出一个rollback命令
+D 终断正在活动的会话
+
+
+--7 下列哪两个语句，能检索出预定总量在100与2000之间的记录？(BE)
+A select customer_id,order_id,order_total from orders Having
+  order_total between 100 and 2000;
+B select customer_id,order_id,order_total from orders where
+  order_total between 100 and 2000;
+C select customer_id,order_id,order_total from orders where
+  order_total>= 100 and <=2000;
+D select customer_id,order_id,order_total from orders Having on
+  order_total ( 100 and 2000) inclusive;
+E select customer_id,order_id,order_total from orders where
+  order_total >= 100 and order_total<=2000;
+  
+--8 以下哪些是有效的oracle约束类型？（ABEG）（选四项）
+A unique    B nounique
+B check     D cascade
+E primary key   F constantg
+G not null
+
+--9 更改oracle用户HR，使其变为不可用（锁定）状态（C）（选择一项）
+A update user HR account disable；
+B update user HR account lock；
+C alter user HR account lock；
+D alter user HR account disable；
+
+--10 insert into test values('&ID','&NAME');语句执行时将（D）（选择一项）
+A 编译错，提示变量未定义
+B 运行错，提示不能识别符号
+C 将值&ID和&NAME插入表中
+D 提示用户输入输入ID和NAME的值，再讲输入值插入表中
+
+--11 下面关于删除视图的说法哪一个是正确的（D）（选择一项）
+A 删除视图后应立即用commit语句更改生效
+B 删除视图后，和视图关联的表中的数据不再存在
+C 视图被删除后，视图中的数据也将被删除
+D 用drop view 删除视图
+
+--12 （B）函数通常用来计算累计排名、移动平均数和报表聚合等。（选择一项）
+A 汇总    B 分析
+C 分组    D 单行
+
+--13 集合操作符Intersect的作用是（C）（选择一项）
+A 将两个记录集联接起来
+B 选择第一个查询有，而第二个没有记录
+C 选择二个查询的交集
+D 选个第二个查询有，而第一个没有记录
+https://max.book118.com/html/2018/0522/168028563.shtm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
